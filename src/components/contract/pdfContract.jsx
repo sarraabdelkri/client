@@ -11,7 +11,9 @@ function PdfContract() {
     const userId = user._id;
 
     useEffect(() => {
+
         const url = `https://expertise-wi59.onrender.com/contract/fetch-pdf/${userId}`;
+
         axios
             .get(url, {
                 responseType: "blob",
@@ -35,14 +37,18 @@ function PdfContract() {
                 <p>Sorry, an error occurred: {error.message}</p>
             ) : (
                 <object
+
                     data={`https://expertise-wi59.onrender.com/contract/fetch-pdf/${userId}`}
+                   
                     type="application/pdf"
                     width="100%"
                     height="600px"
                 >
                     <p>
                         PDF cannot be displayed in your browser,{" "}
+
                         <a href={`https://expertise-wi59.onrender.com/contract/fetch-pdf/${userId}`}>
+
                             click here to download the PDF
                         </a>
                     </p>

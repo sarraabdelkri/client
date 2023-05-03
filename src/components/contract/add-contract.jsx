@@ -56,6 +56,8 @@ export function AddContract({ contract }) {
     let url = `https://expertise-wi59.onrender.com/contract/contract/${userId}/${jobId}/${atelierId}`;
     let urll = `https://expertise-wi59.onrender.com/contract/fetch-pdf/${userId}/${jobId}/${atelierId}`;
 
+
+
     console.log("url", url);
     console.log("urll", urll);
     axios

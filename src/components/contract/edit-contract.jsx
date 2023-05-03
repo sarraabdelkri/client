@@ -47,7 +47,10 @@ export function EditContract() {
     fetchContracts();
   }, []);
 
+
   let urll = `https://expertise-wi59.onrender.com/contract/fetch-pdf/${userId}/${jobId}/${atelierId}`;
+
+
   const handleSubmit = async () => {
     try {
       const response = await updateContract(id, contractstatus);

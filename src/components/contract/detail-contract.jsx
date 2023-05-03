@@ -96,6 +96,7 @@ export function ContractDetail() {
 
   useEffect(() => {
     if (!contract) {
+
       const url = `https://expertise-wi59.onrender.com/contract/${id}`;
 
       const fetchContract = async () => {

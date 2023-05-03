@@ -1,6 +1,8 @@
 import axios from "axios";
 
+
 const backendUrl = "https://expertise-wi59.onrender.com/";
+
 
 const API = axios.create({
     baseURL: backendUrl,
