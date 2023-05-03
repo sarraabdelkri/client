@@ -14,7 +14,7 @@ export function AssessmentsList() {
     const getAssessmentsByCourseName = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:9000/assessment/getAssessmentsByCourseName/${courseName}`
+          `https://expertise-wi59.onrender.com/assessment/getAssessmentsByCourseName/${courseName}`
         );
         setAssessments(response.data.assessments);
       } catch (error) {

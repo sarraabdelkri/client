@@ -30,7 +30,7 @@ export function Review() {
     const reviewData = {
       rating: rating,
     };
-    let url = `http://localhost:9000/review/${courseId}/reviews/${userId}`;
+    let url = `https://expertise-wi59.onrender.com/review/${courseId}/reviews/${userId}`;
     console.log("url", url);
     try {
       const response = await axios.post(url, reviewData);

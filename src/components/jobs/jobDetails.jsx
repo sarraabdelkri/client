@@ -65,7 +65,7 @@ export function JobDetails() {
         };
         try {
             const response = await axios.post(
-                `http://localhost:9000/application/apply/${job._id}`,
+                `https://expertise-wi59.onrender.com/application/apply/${job._id}`,
                 {},
                 config
             );

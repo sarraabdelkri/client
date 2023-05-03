@@ -36,7 +36,7 @@ export function User({ user }) {
             <div className="flex items-center">
               <div className="mt-16 flex items-center">
                 <img
-                  src={`http://localhost:9000/uploads/${user.profilePicture}`}
+                  src={`https://expertise-wi59.onrender.com/uploads/${user.profilePicture}`}
                   width="50"
                   height="50"
                   alt="Profile Picture"

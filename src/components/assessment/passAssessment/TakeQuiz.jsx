@@ -62,7 +62,7 @@ export function TakeQuiz() {
 
   const refreshAssessment = (id) => {
     axios
-      .get(`http://localhost:9000/assessment/getAssessment/${id}`)
+      .get(`https://expertise-wi59.onrender.com/assessment/getAssessment/${id}`)
       .then((res) => {
         if (res.data) {
           setAssessment(res.data.assessment);
@@ -125,7 +125,7 @@ export function TakeQuiz() {
 
   const finishQuiz = () => {
     axios
-      .post("http://localhost:9000/result/saveResult", {
+      .post("https://expertise-wi59.onrender.com/result/saveResult", {
         currentUser: localStorage.getItem("id"),
         answers: answers,
         assessmentId: assessment._id,

@@ -17,7 +17,7 @@ export function Assessment({ assessment }) {
   const userId = assessment.createdBy;
   useEffect(() => {
     axios
-      .get(`http://localhost:9000/user/getUserNameById/${userId}`)
+      .get(`https://expertise-wi59.onrender.com/user/getUserNameById/${userId}`)
       .then((response) => {
         const userName = response.data.userName;
         setUserName(userName);
@@ -34,7 +34,7 @@ export function Assessment({ assessment }) {
 
   const likeAssessment = (assessmentId) => {
     axios
-      .post("http://localhost:9000/assessment/likeAssessment", {
+      .post("https://expertise-wi59.onrender.com/assessment/likeAssessment", {
         assessmentId: assessmentId,
         userId: localStorage.getItem("id"),
       })
@@ -56,7 +56,7 @@ export function Assessment({ assessment }) {
     const userId = localStorage.getItem("id");
 
     axios
-      .get(`http://localhost:9000/result/getResultsByUserId/${userId}`)
+      .get(`https://expertise-wi59.onrender.com/result/getResultsByUserId/${userId}`)
       .then((response) => {
         const results = response.data;
         const matchingResult = results.find(

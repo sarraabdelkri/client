@@ -119,7 +119,7 @@ export function CreateAssessment() {
       imgUrl: imageUrl,
     };
     axios
-      .post("http://localhost:9000/assessment/createAssessment", {
+      .post("https://expertise-wi59.onrender.com/assessment/createAssessment", {
         assessment,
         createdBy: localStorage.getItem("id"),
       })

@@ -44,7 +44,7 @@ export function ViewAssessment() {
 
   const refreshAssessment = (id) => {
     axios
-      .get(`http://localhost:9000/assessment/getAssessment/${id}`)
+      .get(`https://expertise-wi59.onrender.com/assessment/getAssessment/${id}`)
       .then((res) => {
         if (res.data) {
           setAssessment(res.data.assessment);
@@ -57,7 +57,7 @@ export function ViewAssessment() {
   const addComment = () => {
     if (!inputVal.length) return;
     axios
-      .post("http://localhost:9000/assessment/addComment", {
+      .post("https://expertise-wi59.onrender.com/assessment/addComment", {
         assessmentId: id,
         message: inputVal,
         sentFrom: localStorage.getItem("name"),
@@ -74,7 +74,7 @@ export function ViewAssessment() {
 
   const deleteComment = (com) => {
     axios
-      .delete("http://localhost:9000/assessment/deleteComment", {
+      .delete("https://expertise-wi59.onrender.com/assessment/deleteComment", {
         data: {
           assessmentId: id,
           sentFrom: com.sentFrom,

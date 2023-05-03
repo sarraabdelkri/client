@@ -30,7 +30,7 @@ export function ViewResults() {
       if (!id) {
         navigate("/");
       } else {
-        axios.get("http://localhost:9000/result/results/" + id).then((res) => {
+        axios.get("https://expertise-wi59.onrender.com/result/results/" + id).then((res) => {
           setResult(res.data.score);
           setAssessment(res.data.assessment);
         });

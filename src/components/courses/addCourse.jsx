@@ -94,7 +94,7 @@ export function AddCourse() {
       form.append("enddate", enddateFormatted);
       form.append("price", price);
       form.append("file", file);
-      const url = `http://localhost:9000/course/addCourse/${instructorId}`;
+      const url = `https://expertise-wi59.onrender.com/course/addCourse/${instructorId}`;
       console.log(url);
       const response = await axios.post(url, form, {
         headers: {

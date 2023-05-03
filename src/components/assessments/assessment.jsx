@@ -25,7 +25,7 @@ export function Assessment({ assessment }) {
   const userId = assessment.createdBy;
   useEffect(() => {
     axios
-      .get(`http://localhost:9000/user/getUserNameById/${userId}`)
+      .get(`https://expertise-wi59.onrender.com/user/getUserNameById/${userId}`)
       .then((response) => {
         const userName = response.data.userName;
         setUserName(userName);
@@ -46,7 +46,7 @@ export function Assessment({ assessment }) {
     setLoading(true);
     axios
       .delete(
-        `http://localhost:9000/assessment/deleteAssessment/${assessment._id}`
+        `https://expertise-wi59.onrender.com/assessment/deleteAssessment/${assessment._id}`
       )
       .then((response) => {
         setLoading(false);

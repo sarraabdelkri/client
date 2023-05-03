@@ -53,7 +53,7 @@ const PDFFile = ({ score, assessment, result }) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:9000/user/getUserNameById/${result.userId}`)
+      .get(`https://expertise-wi59.onrender.com/user/getUserNameById/${result.userId}`)
       .then((response) => {
         const userName = response.data.userName;
         setUserName(userName);
@@ -65,7 +65,7 @@ const PDFFile = ({ score, assessment, result }) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:9000/user/getUserNameById/${assessment.createdBy}`)
+      .get(`https://expertise-wi59.onrender.com/user/getUserNameById/${assessment.createdBy}`)
       .then((response) => {
         const createdBy = response.data.userName;
         setCreatedBy(createdBy);

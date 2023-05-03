@@ -24,7 +24,7 @@ export function Results() {
     } else {
       axios
         .get(
-          "http://localhost:9000/result/getResultsAndAssessmentsByUserId/" + id
+          "https://expertise-wi59.onrender.com/result/getResultsAndAssessmentsByUserId/" + id
         )
         .then((res) => {
           setResults(res.data.data.map((result) => result.result));
